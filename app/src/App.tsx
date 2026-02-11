@@ -118,7 +118,7 @@ export default function App() {
               <div className="download-row">
                 <DownloadButton
                   text={state.editedPresetText}
-                  presetName={state.conversionResult?.presetName || 'preset'}
+                  presetName={state.conditionLabel || 'preset'}
                   disabled={!state.editedPresetText}
                 />
               </div>
