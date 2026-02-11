@@ -1,0 +1,255 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1a1a2e;
+  background-color: #f0f2f5;
+  font-size: 14px;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; }
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Layout */
+.app-header {
+  text-align: center;
+  padding: 1.5rem 0 1rem;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+.app-header h1 { font-size: 1.8rem; margin: 0 0 0.25rem; color: #16213e; }
+.app-header p { margin: 0; color: #666; }
+
+.section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.row { display: flex; gap: 1.25rem; }
+.col-1 { flex: 1; }
+.col-2 { flex: 2; }
+
+@media (max-width: 768px) {
+  .row { flex-direction: column; }
+}
+
+/* File Upload */
+.file-upload {
+  border: 2px dashed #c0c0c0;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.file-upload:hover, .file-upload.drag-over {
+  border-color: #4a6cf7;
+  background: #f0f4ff;
+}
+.file-upload.has-file {
+  border-color: #4caf50;
+  border-style: solid;
+  background: #f0faf0;
+}
+.file-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.file-prompt span, .file-loaded span { display: block; }
+.file-prompt small, .file-loaded small { color: #888; font-size: 0.8rem; }
+
+/* Condition Input */
+.condition-input { display: flex; flex-direction: column; gap: 0.4rem; }
+.condition-input label { font-weight: 600; font-size: 0.85rem; }
+.condition-input input {
+  padding: 0.5rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.condition-input small { color: #888; font-size: 0.75rem; }
+
+/* Frequency Table */
+.frequency-table-container h3 { margin-top: 0; }
+.frequency-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+.frequency-table th {
+  background: #f5f5f5;
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 2px solid #e0e0e0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #666;
+}
+.frequency-table td {
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+.frequency-table tr:hover { background: #f8f8ff; }
+.frequency-table tr.excluded { opacity: 0.4; }
+.mono { font-family: 'Consolas', 'Monaco', monospace; font-size: 0.85rem; }
+.num { text-align: right; }
+.unknown { color: #e65100; font-style: italic; }
+
+.category-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.cat-essential { background: #e3f2fd; color: #1565c0; }
+.cat-conditional { background: #fff3e0; color: #e65100; }
+.cat-nonessential { background: #f1f8e9; color: #558b2f; }
+.cat-unknown { background: #fce4ec; color: #c62828; }
+
+/* Dwell Mode Selector */
+.dwell-mode-selector h3 { margin-top: 0; }
+.mode-options { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
+.mode-option {
+  display: flex; align-items: flex-start; gap: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.mode-option:hover { border-color: #4a6cf7; }
+.mode-option.active { border-color: #4a6cf7; background: #f0f4ff; }
+.mode-option input[type="radio"] { margin-top: 0.25rem; }
+.mode-option strong { display: block; font-size: 0.9rem; }
+.mode-option small { color: #666; font-size: 0.8rem; }
+
+.dwell-params { display: flex; flex-direction: column; gap: 0.5rem; }
+.param-row {
+  display: flex; justify-content: space-between; align-items: center; gap: 0.5rem;
+}
+.param-row label { font-size: 0.85rem; }
+.param-row input[type="number"] {
+  width: 80px; padding: 0.35rem; border: 1px solid #d0d0d0;
+  border-radius: 4px; text-align: right;
+}
+
+/* API Key */
+.api-key-input { margin-bottom: 1rem; }
+.api-key-input label { font-weight: 600; font-size: 0.85rem; display: block; margin-bottom: 0.3rem; }
+.api-key-row { display: flex; gap: 0.5rem; }
+.api-key-row input {
+  flex: 1; padding: 0.5rem; border: 1px solid #d0d0d0;
+  border-radius: 4px; font-family: monospace;
+}
+.api-key-input small { color: #888; font-size: 0.75rem; }
+
+/* Buttons */
+.btn-primary {
+  background: #4a6cf7; color: #fff; border: none; border-radius: 6px;
+  padding: 0.6rem 1.2rem; font-size: 0.9rem; font-weight: 600;
+  cursor: pointer; transition: background 0.15s;
+}
+.btn-primary:hover:not(:disabled) { background: #3a5ce5; }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-small {
+  background: #e8e8e8; border: 1px solid #d0d0d0; border-radius: 4px;
+  padding: 0.35rem 0.75rem; font-size: 0.85rem; cursor: pointer;
+}
+.btn-small:hover { background: #d8d8d8; }
+
+.btn-remove {
+  background: none; border: none; color: #c62828; cursor: pointer;
+  font-size: 1rem; padding: 0.2rem 0.5rem;
+}
+.btn-remove:hover { background: #fce4ec; border-radius: 4px; }
+
+.btn-download {
+  background: #4caf50; color: #fff; border: none; border-radius: 6px;
+  padding: 0.75rem 2rem; font-size: 1rem; font-weight: 600;
+  cursor: pointer; transition: background 0.15s;
+}
+.btn-download:hover:not(:disabled) { background: #43a047; }
+.btn-download:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.download-row { margin-top: 1rem; text-align: center; }
+
+/* Research Panel */
+.research-panel h3 { margin-top: 0; }
+.research-desc { color: #666; font-size: 0.85rem; margin-bottom: 1rem; }
+.warning { display: block; color: #e65100; margin-top: 0.3rem; }
+.error-msg {
+  background: #fce4ec; color: #c62828; padding: 0.5rem 0.75rem;
+  border-radius: 4px; margin-top: 0.5rem; font-size: 0.85rem;
+}
+
+.research-results { margin-top: 1rem; }
+.result-section { margin-bottom: 1rem; }
+.result-section h4 { margin: 0 0 0.5rem; font-size: 0.9rem; color: #333; }
+.result-item {
+  padding: 0.5rem; background: #f8f9fa; border-radius: 4px;
+  margin-bottom: 0.4rem; font-size: 0.85rem;
+}
+.result-item strong { color: #1565c0; }
+.result-item small { color: #666; }
+.result-section p { font-size: 0.85rem; color: #444; line-height: 1.6; }
+
+/* Phase Editor */
+.phase-editor h3 { margin-top: 0; }
+.phase-tabs { display: flex; gap: 0; margin-bottom: 1rem; }
+.phase-tab {
+  padding: 0.5rem 1rem; border: 1px solid #e0e0e0; background: #f5f5f5;
+  cursor: pointer; font-size: 0.85rem; transition: all 0.15s;
+}
+.phase-tab:first-child { border-radius: 6px 0 0 6px; }
+.phase-tab:last-child { border-radius: 0 6px 6px 0; }
+.phase-tab.active { background: #4a6cf7; color: #fff; border-color: #4a6cf7; }
+.freq-count { margin-left: 0.3rem; opacity: 0.7; }
+
+.phase-panel { padding: 0.5rem 0; }
+.phase-panel h4 { margin: 0 0 0.3rem; }
+.phase-desc { color: #666; font-size: 0.85rem; margin: 0 0 1rem; }
+
+.phase-freq-table {
+  width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-bottom: 1rem;
+}
+.phase-freq-table th {
+  background: #f5f5f5; padding: 0.4rem 0.5rem; text-align: left;
+  border-bottom: 1px solid #e0e0e0; font-size: 0.8rem;
+}
+.phase-freq-table td { padding: 0.35rem 0.5rem; border-bottom: 1px solid #f0f0f0; }
+
+.dwell-input { width: 70px; padding: 0.25rem; border: 1px solid #d0d0d0; border-radius: 4px; text-align: right; }
+
+.empty-phase { color: #888; font-style: italic; font-size: 0.85rem; }
+
+.brainwave-toggle {
+  display: flex; align-items: center; gap: 0.4rem;
+  font-size: 0.85rem; margin-bottom: 0.75rem; cursor: pointer;
+}
+
+.add-freq-row {
+  display: flex; gap: 0.5rem; align-items: center;
+  padding-top: 0.5rem; border-top: 1px solid #f0f0f0;
+}
+.add-freq-row input[type="text"] {
+  flex: 1; padding: 0.35rem; border: 1px solid #d0d0d0; border-radius: 4px;
+  font-size: 0.85rem;
+}
+.add-freq-row input[type="number"] { font-size: 0.85rem; }
+
+/* Preset Preview */
+.preset-preview h3 { margin-top: 0; }
+.preset-preview textarea {
+  width: 100%; min-height: 300px; padding: 0.75rem;
+  font-family: 'Consolas', 'Monaco', monospace; font-size: 0.8rem;
+  border: 1px solid #d0d0d0; border-radius: 4px;
+  background: #fafafa; resize: vertical; line-height: 1.4;
+}

@@ -1,0 +1,21 @@
+[
+  { "mw": 57.021, "mwKey": "M57.021", "name": "Glycine", "code": "G", "category": "non_essential" },
+  { "mw": 71.037, "mwKey": "M71.037", "name": "Alanine", "code": "A", "category": "non_essential" },
+  { "mw": 87.032, "mwKey": "M87.032", "name": "Serine", "code": "S", "category": "non_essential" },
+  { "mw": 97.053, "mwKey": "M97.053", "name": "Proline", "code": "P", "category": "conditionally_essential" },
+  { "mw": 99.068, "mwKey": "M99.068", "name": "Valine", "code": "V", "category": "essential" },
+  { "mw": 101.048, "mwKey": "M101.048", "name": "Threonine", "code": "T", "category": "essential" },
+  { "mw": 103.009, "mwKey": "M103.009", "name": "Cysteine", "code": "C", "category": "conditionally_essential" },
+  { "mw": 113.084, "mwKey": "M113.084", "name": "Leucine/Isoleucine", "code": "L/I", "category": "essential" },
+  { "mw": 114.043, "mwKey": "M114.043", "name": "Asparagine", "code": "N", "category": "non_essential" },
+  { "mw": 115.027, "mwKey": "M115.027", "name": "Aspartic acid", "code": "D", "category": "non_essential" },
+  { "mw": 128.058, "mwKey": "M128.058", "name": "Glutamine", "code": "Q", "category": "conditionally_essential" },
+  { "mw": 128.095, "mwKey": "M128.095", "name": "Lysine", "code": "K", "category": "essential" },
+  { "mw": 129.043, "mwKey": "M129.043", "name": "Glutamic acid", "code": "E", "category": "non_essential" },
+  { "mw": 131.040, "mwKey": "M131.040", "name": "Methionine", "code": "M", "category": "essential" },
+  { "mw": 137.059, "mwKey": "M137.059", "name": "Histidine", "code": "H", "category": "essential" },
+  { "mw": 147.068, "mwKey": "M147.068", "name": "Phenylalanine", "code": "F", "category": "essential" },
+  { "mw": 156.101, "mwKey": "M156.101", "name": "Arginine", "code": "R", "category": "conditionally_essential" },
+  { "mw": 163.063, "mwKey": "M163.063", "name": "Tyrosine", "code": "Y", "category": "conditionally_essential" },
+  { "mw": 186.079, "mwKey": "M186.079", "name": "Tryptophan", "code": "W", "category": "essential" }
+]
